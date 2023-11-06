@@ -19,12 +19,12 @@ create table `authorities` (
 );
 
 
-insert into users(username, password, enabled)values('zarras','{noop}zarras',true);
-insert into users(username, password, enabled)values('pvassil','{noop}pvassil',true);
+insert into users(username, password, enabled)values('teacher1','{noop}teacher1',true);
+insert into users(username, password, enabled)values('teacher2','{noop}teacher2',true);
  
-insert into authorities(username,authority)values('zarras','ROLE_ADMIN');
-insert into authorities(username,authority)values('zarras','ROLE_USER');
-insert into authorities(username,authority)values('pvassil','ROLE_USER');
+insert into authorities(username,authority)values('teacher1','ROLE_ADMIN');
+insert into authorities(username,authority)values('teacher1','ROLE_USER');
+insert into authorities(username,authority)values('teacher2','ROLE_USER');
 --
 -- Table structure for table `course`
 --
@@ -46,9 +46,9 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` VALUES 
-    (1, 'Software Engineering', 'zarras',2022, 8, 'CSS, Java, Springboot'),
-    (2, 'Evolutionary Computa', 'zarras',2021, 0, 'Evol Algorithms'),
-    (3, 'Evolutionary Compu 2', 'pvassil',2024, 5, 'Evol Algorithms');
+    (1, 'Software Engineering', 'teacher1',2022, 8, 'CSS, Java, Springboot'),
+    (2, 'Evolutionary Computa', 'teacher1',2021, 0, 'Evol Algorithms'),
+    (3, 'Evolutionary Compu 2', 'teacher2',2024, 5, 'Evol Algorithms');
     
 --
 -- Table structure for table `student_registrations`
@@ -78,7 +78,7 @@ CREATE TABLE `student_registrations` (
 
 INSERT INTO `student_registrations` VALUES 
 	(1,'Thomai',2000,10,1,10,10,1),
-    (2,'Nikolis',2000,10,1,9,9,1),
+    (2,'Nikos',2000,10,1,9,9,1),
     (3,'John',2000,10,1,8,8,1),
 	(4,'Name1',2000,10,1,7,7,2),
 	(5,'Name2',2000,10,1,6,6,2),

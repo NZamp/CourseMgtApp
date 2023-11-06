@@ -29,33 +29,26 @@ public class CourseController {
 	}
 
 	// add mapping for "/list
-	
 	@RequestMapping("/list")
 	public String listCourses(Model theModel) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		String instructorLogin = authentication.getName();	
-		
 		// get courses from db
 		List<Course> theCourses = courseService.findByInstructorLogin(instructorLogin);
-		
 		if (theCourses == null) {
-			// display a message
+			// TODO: display a message
 		}
 		// add the spring model
 		theModel.addAttribute("courses", theCourses);
-		
 		return "courses/list-courses";
-		
 	}
 	
 	@RequestMapping("/showFormForAdd")
 	public String showFormForAdd(Model theModel) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		String instructorLogin = authentication.getName();	
-		
 		// create model attribute to bind from data
 		Course theCourse = new Course(instructorLogin);
-		
 		theModel.addAttribute("course", theCourse);
 		return "courses/course-form";
 	}
@@ -63,14 +56,11 @@ public class CourseController {
 	@RequestMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("courseId") int theId,
 									Model theModel) {
-		
 		// get the course from the service
 		Course theCourse = courseService.findById(theId);
 		// set course as a model attribute to pre-populate the form
 		theModel.addAttribute("course", theCourse);
-
-		
-		// send over to our form
+		// send over to the form
 		return "courses/course-form";			
 	}
 	
@@ -88,33 +78,24 @@ public class CourseController {
 	
 	@RequestMapping("/delete")
 	public String delete(@RequestParam("courseId") int theId) {
-		
 		// delete course
 		courseService.deleteById(theId);
-		
 		// redirect to /courses/list ACTION
 		return "redirect:/courses/list";
-		
 	}
 	
 	@RequestMapping("/showCourseStatistics")
 	public String showCourseStatistics(@RequestParam("courseId") int theCourseId, Model theModel) {
-
 		// add the course name to the model:
 		Course theCourse = courseService.findById(theCourseId);
 		theModel.addAttribute("courseName", theCourse.getCourseName());
-		
 		// get the course's statistics:
 		Map<String, Double> statMap = courseService.getCourseStatistics(theCourseId);
-		
 		Set<String> keySet = statMap.keySet();
-		
 		// add the statistics to the model:
 		for (String key : keySet) {
 			theModel.addAttribute(key,statMap.get(key));
 		}
-			
 		return "courses/list-statistics";
-		
 	}
 }

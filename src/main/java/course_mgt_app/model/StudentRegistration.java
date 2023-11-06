@@ -12,7 +12,6 @@ import javax.persistence.Table;
 public class StudentRegistration {
 	
 	// define fields
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="student_Id")
@@ -36,14 +35,10 @@ public class StudentRegistration {
 	@Column(name="student_Project_Grade")
 	private double studentProjectGrade;
 
-	//@JoinColumn(name = "course_Id", table = "courses")
 	@Column(name="course_Id")
 	private int courseId;
 	
-
-
 	// define constructors:
-	
 	public StudentRegistration() {
 		
 	}
@@ -91,9 +86,6 @@ public class StudentRegistration {
 	}
 
 	// Getters & Setters:
-
-	
-
 	public int getStudentId() {
 		return studentId;
 	}
@@ -156,9 +148,7 @@ public class StudentRegistration {
 	
 	public double getStudentProjectGrade() {
 		return this.studentProjectGrade;
-	}
-	// define toString
-	
+	}	
 
 	@Override
 	public String toString() {

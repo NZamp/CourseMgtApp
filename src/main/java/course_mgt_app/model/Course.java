@@ -12,7 +12,6 @@ import javax.persistence.Table;
 public class Course {
 	
 	// define fields
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	//@Column(name="courseId")
@@ -21,9 +20,6 @@ public class Course {
 	@Column(name="courseName")
 	private String courseName;
 
-   // @Column(name = "instructor_Login")
-	
-	
 	@Column(name="academicYear")
 	private int academicYear;
 	
@@ -33,11 +29,9 @@ public class Course {
 	@Column(name="syllabus")
 	private String syllabus;
 	
-
 	// define Constructors:
-
 	public Course() {
-		
+
 	}
 	
 	public Course(int courseId, String courseName, String instructorLogin, int academicYear, String semester,
@@ -59,6 +53,7 @@ public class Course {
 		this.instructorLogin = instructorLogin;
 		this.syllabus = syllabus;
 	}
+
 	public Course(String instructorLogin) {
 		super();
 		this.instructorLogin = instructorLogin;
@@ -118,14 +113,4 @@ public class Course {
 		return "Course [id=" + courseId + 
 			   ", Course Name=" + courseName + ", InstructorLogin = " + instructorLogin + ", Academic Year=" + academicYear + ", Semester=" + semester + ", Syllabus=" + syllabus + "]";
 	}
-
-	/*
-	{public ArrayList<StudentRegistration> getStudentsRegistered() {
-		return studentsRegistered;
-	}
-
-	public void setStudentsRegistered(ArrayList<StudentRegistration> studentsRegistered) {
-		this.studentsRegistered = studentsRegistered;
-	}
-	*/
 }

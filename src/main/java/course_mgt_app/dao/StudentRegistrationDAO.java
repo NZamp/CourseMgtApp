@@ -12,9 +12,5 @@ public interface StudentRegistrationDAO extends JpaRepository<StudentRegistratio
 
 	public StudentRegistration findByStudentId(int theId);
 
-	public List<StudentRegistration> findByCourseId(int courseId);
-
-
-	//public void save(StudentRegistration theStudentRegistration);
-	
+	public List<StudentRegistration> findByCourseId(int courseId)
 }

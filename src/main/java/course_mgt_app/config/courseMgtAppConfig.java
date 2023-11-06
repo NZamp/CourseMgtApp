@@ -43,8 +43,6 @@ public class courseMgtAppConfig extends WebSecurityConfigurerAdapter {
 		 */
 		.and() 
 		.formLogin(); // specifically this method tells spring to generate a default login page
-	
-		// .loginPage(...).loginProcessingUrl(...)
 	}
 	
 		

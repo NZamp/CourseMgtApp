@@ -8,7 +8,6 @@ import course_mgt_app.model.Course;
 public interface CourseService {
 	
 
-	
 	public Course findById(int theId);
 	
 	public List<Course> findByInstructorLogin(String instructorLogin);
@@ -17,7 +16,6 @@ public interface CourseService {
 	
 	public void deleteById(int theId);
 
-	
 	// statistics:
 	public Map<String, Double> getCourseStatistics(int courseId);
 	

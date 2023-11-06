@@ -21,8 +21,6 @@ public class CourseServiceImpl implements CourseService {
 	private List<StatisticStrategy> calculationStrategies;
 	
 	// Interface classes implementation:
-	
-	
 	/* STATISTIC COMPONENTS: */
 	@Autowired
 	@Qualifier("KurtosisStrategyService")
@@ -54,7 +52,6 @@ public class CourseServiceImpl implements CourseService {
 	
 	/*END OF STATISTIC COMPONENTS*/
 	
-	
 	@Autowired
 	private CourseDAO courseRepository;
 	
@@ -63,7 +60,6 @@ public class CourseServiceImpl implements CourseService {
 		courseRepository = theCourseRepository;
 	}
 	
-
 	public CourseServiceImpl() { 
 		
 	}
@@ -107,9 +103,7 @@ public class CourseServiceImpl implements CourseService {
 		}
 	}
 	
-
 	// Statistic classes:
-	
 	@Override
 	public Map<String, Double> getCourseStatistics(int courseId){
 		
@@ -142,7 +136,6 @@ public class CourseServiceImpl implements CourseService {
 		Double varianceResult = Precision.round(varianceStrategy.calculateStatistic(course),3);
 		
 		// put results to the Map:
-		
 		this.courseStatistics.put("kurtosis", kurtosisResult);
 		this.courseStatistics.put("max", maxResult);
 		this.courseStatistics.put("min", minResult);
