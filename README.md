@@ -19,16 +19,14 @@ A Spring/Java WebApp for managing University Courses, built using the MVC archit
 
 #### The Main View:
 
-![Screenshot_1](https://github.com/NZamp/CourseMgtApp/assets/25671112/3cfa6960-a420-49cc-b05d-2bcb4e9c1462)
+![Screenshot_1](https://github.com/NZamp/CourseMgtApp/assets/25671112/fbb7f3d2-a89e-41ed-b3aa-58c10009d2e0)
 
 #### Students List of the Course "Software Engineering":
-
-![Students List](https://github.com/NZamp/CourseMgtApp/assets/25671112/655d6e04-fa8c-4baa-8d93-9d86cf5931ba)
+![Screenshot_2](https://github.com/NZamp/CourseMgtApp/assets/25671112/7a796d9e-fcd5-44a8-ba74-d5477bae4201)
 
 #### Enrol a Student to the Course: 
+![Screenshot_3](https://github.com/NZamp/CourseMgtApp/assets/25671112/dcc87481-bd33-424f-8beb-32f7a29c0999)
 
-![Enrol a Student to the Course](https://github.com/NZamp/CourseMgtApp/assets/25671112/7ff153c2-e207-47a1-a0ae-a4e5d9db23d6)
 
 #### View the Course's Statistics:
-
-![View the Course's Statistics](https://github.com/NZamp/CourseMgtApp/assets/25671112/d3209096-ade9-4fd8-99b5-fca7c9e0c7d9)
+![Screenshot_4](https://github.com/NZamp/CourseMgtApp/assets/25671112/a44efd26-aa81-4171-b085-b851d95daa7d)
